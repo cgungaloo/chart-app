@@ -19,7 +19,7 @@ pipeline{
 									makeEmptyDirs: false, 
 									noDefaultExcludes: false, 
 									patternSeparator: '[, ]+', 
-									remoteDirectory: '', 
+									remoteDirectory: '/home/ec2-user', 
 									remoteDirectorySDF: false, 
 									removePrefix: '', 
 									sourceFiles: 'chart-app/'
