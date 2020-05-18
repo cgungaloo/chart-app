@@ -38,7 +38,7 @@ class App extends Component {
         dataPoints: [
           { x: new Date("2018-03-01"), y: 510.3},
           { x: new Date("2018-03-02"), y: 100.97},
-          { x: new Date("2018-03-05"), y: 813.49},
+          { x: new Date("2018-03-05"), y: 913.49},
           { x: new Date("2018-03-06"), y: 84.16},
           { x: new Date("2018-03-07"), y: 814.86},
           { x: new Date("2018-03-08"), y: 84.97},
