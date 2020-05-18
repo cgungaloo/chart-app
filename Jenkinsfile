@@ -22,7 +22,7 @@ pipeline{
 									remoteDirectory: '/home/ec2-user', 
 									remoteDirectorySDF: false, 
 									removePrefix: '', 
-									sourceFiles: 'chart-app/'
+									sourceFiles: '/chart-app'
 									)
 								], 
 								usePromotionTimestamp: false, 
