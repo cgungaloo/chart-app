@@ -36,7 +36,7 @@ class App extends Component {
         xValueFormatString: "DD MMM",
         yValueFormatString: "€##0.00",
         dataPoints: [
-          { x: new Date("2018-03-01"), y: 50.3},
+          { x: new Date("2018-03-01"), y: 510.3},
           { x: new Date("2018-03-02"), y: 100.97},
           { x: new Date("2018-03-05"), y: 813.49},
           { x: new Date("2018-03-06"), y: 84.16},
