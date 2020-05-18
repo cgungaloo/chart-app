@@ -3,6 +3,7 @@ pipeline{
 
 	stages{
 		stage('SSH Transfer'){
+			steps{
 			script{
 				sshPublisher(
 					publishers: [
@@ -31,6 +32,7 @@ pipeline{
 						]
 						)
 			}
+		}
 		}
 	}	
 }
