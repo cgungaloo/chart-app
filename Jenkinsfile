@@ -1,10 +1,35 @@
 pipeline{
 	agent any
-	
+
 	stages{
-		stage('test'){
-			steps{
-				sh 'echo test worked for repo2'
+		stage('SSH Transfer'){
+			script{
+				sshPublisher(
+					publishers: [
+						sshPublisherDesc(
+							configName: 'docker_host', 
+							transfers: [
+								sshTransfer(
+									cleanRemote: false,
+									excludes: '', 
+									execCommand: 'sudo docker build -t sample:dev .', 
+									execTimeout: 120000, 
+									flatten: false, 
+									makeEmptyDirs: false, 
+									noDefaultExcludes: false, 
+									patternSeparator: '[, ]+', 
+									remoteDirectory: '', 
+									remoteDirectorySDF: false, 
+									removePrefix: '', 
+									sourceFiles: 'chart-app/'
+									)
+								], 
+								usePromotionTimestamp: false, 
+								useWorkspaceInPromotion: false, 
+								verbose: false
+								)
+						]
+						)
 			}
 		}
 	}	
