@@ -5,6 +5,7 @@ pipeline{
 		stage('SSH Transfer'){
 			steps{
 			script{
+				sh 'ls'
 				sshPublisher(
 					publishers: [
 						sshPublisherDesc(
