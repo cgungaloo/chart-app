@@ -42,7 +42,7 @@ class App extends Component {
           { x: new Date("2018-03-06"), y: 84.16},
           { x: new Date("2018-03-07"), y: 84.86},
           { x: new Date("2018-03-08"), y: 84.97},
-          { x: new Date("2018-03-09"), y: 85.13},
+          { x: new Date("2018-03-09"), y: 815.13},
           { x: new Date("2018-03-12"), y: 85.71},
           { x: new Date("2018-03-13"), y: 84.63},
           { x: new Date("2018-03-14"), y: 84.17},
