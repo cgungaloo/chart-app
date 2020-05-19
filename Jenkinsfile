@@ -2,6 +2,10 @@ pipeline{
 	agent any
 
 	stages{
+		stage('clear wrkdir'){
+			deleteDir()
+		}
+
 		stage('build docker image'){
 			steps{
 				script{
