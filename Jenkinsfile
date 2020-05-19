@@ -22,7 +22,7 @@ pipeline{
 		stage('change owner'){
 			steps{
 				script{
-					sh 'sudo chown -R $docker_admin_cg /'
+					sh 'chown -R $docker_admin_cg /'
 				}
 			}
 		}
