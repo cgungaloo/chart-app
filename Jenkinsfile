@@ -33,9 +33,9 @@ pipeline{
 							transfers: [
 								sshTransfer(
 									sourceFiles: "**/*",
-									removePrefix: "/",
+									removePrefix: "",
 									remoteDirectory: "",
-									execCommand: "ls"
+									execCommand: "pwd"
 
 								)
 							]
