@@ -21,7 +21,7 @@ pipeline{
 		stage('SSH Transfer'){
 			steps{
 			script{
-				sh 'ls -ltr'
+				sh 'ssh -v'
 
 				sshPublisher(
 					continueOnError: false, failOnError: true,
