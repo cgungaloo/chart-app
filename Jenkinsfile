@@ -34,7 +34,7 @@ pipeline{
 									sourceFiles: "**/*",
 									removePrefix: "/",
 									remoteDirectory: "/home/ec2-user/",
-									execCommand: "ls"
+									execCommand: "ls -ltr"
 
 								)
 							]
