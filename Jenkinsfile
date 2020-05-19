@@ -12,7 +12,7 @@ pipeline{
 
 		stage('push docker image'){
 			steps{
-				script{
+				withDockerRegistry([ credentialsID: "docker-creds"]){
 					sh 'docker push chrisgungaloo/chart-app:dev'
 				}
 			}
@@ -31,7 +31,7 @@ pipeline{
 								sshTransfer(
 									cleanRemote: false,
 									excludes: '', 
-									execCommand: 'sudo docker pull chrisgungaloo/chart-app:dev', 
+									execCommand: 'echo hello there!!!', 
 									execTimeout: 120000, 
 									flatten: false, 
 									makeEmptyDirs: false, 
