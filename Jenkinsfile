@@ -12,7 +12,7 @@ pipeline{
 
 		stage('push docker image'){
 			steps{
-				withDockerRegistry([ credentialsId: "docker-creds"]){
+				withDockerRegistry([ credentialsId: "docker-creds" , url: ""]){
 					sh 'docker push chrisgungaloo/chart-app:dev'
 				}
 			}
