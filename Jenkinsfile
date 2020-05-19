@@ -13,11 +13,11 @@ pipeline{
 		stage('push docker image'){
 			steps{
 				script{
-					sh 'docker push chrisgungaloo/chart-app:tagname'
+					sh 'docker push chrisgungaloo/chart-app:dev'
 				}
 			}
 		}
-		
+
 		stage('SSH Transfer'){
 			steps{
 			script{
