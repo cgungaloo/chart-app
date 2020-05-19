@@ -37,10 +37,10 @@ pipeline{
 									makeEmptyDirs: false, 
 									noDefaultExcludes: false, 
 									patternSeparator: '[, ]+', 
-									remoteDirectory: '/home/docker_admin_cg', 
+									remoteDirectory: '/home/ec2-user/', 
 									remoteDirectorySDF: false, 
 									removePrefix: '', 
-									sourceFiles: ''
+									sourceFiles: '/chart-app'
 									)
 								], 
 								usePromotionTimestamp: false, 
