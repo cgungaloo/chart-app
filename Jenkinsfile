@@ -31,13 +31,13 @@ pipeline{
 								sshTransfer(
 									cleanRemote: false,
 									excludes: '', 
-									execCommand: 'echo hello there!!!', 
+									execCommand: '/home/ec2-user/test_ssh', 
 									execTimeout: 120000, 
 									flatten: false, 
 									makeEmptyDirs: false, 
 									noDefaultExcludes: false, 
 									patternSeparator: '[, ]+', 
-									remoteDirectory: '/home/ec2-user', 
+									remoteDirectory: '/home/docker_admin_cg', 
 									remoteDirectorySDF: false, 
 									removePrefix: '', 
 									sourceFiles: ''
