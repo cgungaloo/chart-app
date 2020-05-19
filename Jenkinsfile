@@ -34,7 +34,7 @@ pipeline{
 								sshTransfer(
 									sourceFiles: "**/*",
 									removePrefix: "/",
-									remoteDirectory: "/home/ec2-user/",
+									remoteDirectory: "",
 									execCommand: "ls"
 
 								)
