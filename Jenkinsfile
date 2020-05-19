@@ -24,31 +24,22 @@ pipeline{
 				sh 'ls'
 
 				sshPublisher(
+					continueOnError: false, failOnError: true,
 					publishers: [
 						sshPublisherDesc(
-							configName: 'docker_host', 
+							configName: "docker_host",
+							verbose: true,
 							transfers: [
 								sshTransfer(
-									cleanRemote: false,
-									excludes: '', 
-									execCommand: 'sudo docker -v', 
-									execTimeout: 120000, 
-									flatten: false, 
-									makeEmptyDirs: false, 
-									noDefaultExcludes: false, 
-									patternSeparator: '[, ]+', 
-									remoteDirectory: '/home/ec2-user/', 
-									remoteDirectorySDF: false, 
-									removePrefix: '', 
-									sourceFiles: '/chart-app'
-									)
-								], 
-								usePromotionTimestamp: false, 
-								useWorkspaceInPromotion: false, 
-								verbose: false
+									sourceFiles: "/chart-app",
+									removePrefix: "",
+									remoteDirectory: "/home/ec2-user",
+									execCommand: "ls"
 								)
-						]
+							]
 						)
+					]
+				)
 			}
 		}
 		}
