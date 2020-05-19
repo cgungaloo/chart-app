@@ -19,14 +19,6 @@ pipeline{
 			}
 		}
 
-		stage('change owner'){
-			steps{
-				script{
-					sh 'chown -R users:docker_admin_cg /'
-				}
-			}
-		}
-
 		stage('SSH Transfer'){
 			steps{
 			script{
@@ -43,7 +35,7 @@ pipeline{
 									sourceFiles: "**/*",
 									removePrefix: "/",
 									remoteDirectory: "/home/ec2-user/",
-									execCommand: "pwd"
+									execCommand: "chown -R users:docker_admin_cg /"
 
 								)
 							]
