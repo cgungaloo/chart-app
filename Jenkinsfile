@@ -31,7 +31,7 @@ pipeline{
 							verbose: true,
 							transfers: [
 								sshTransfer(
-									sourceFiles: "/chart-app/",
+									sourceFiles: "/chart-app/**",
 									removePrefix: "",
 									remoteDirectory: "/home/ec2-user/",
 									execCommand: "ls"
