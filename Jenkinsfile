@@ -3,7 +3,9 @@ pipeline{
 
 	stages{
 		stage('clear wrkdir'){
-			deleteDir()
+			steps{
+				deleteDir()
+			}
 		}
 
 		stage('build docker image'){
