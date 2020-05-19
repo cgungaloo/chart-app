@@ -35,7 +35,7 @@ pipeline{
 									sourceFiles: "**/*",
 									removePrefix: "/",
 									remoteDirectory: "/home/ec2-user/",
-									execCommand: "chown -R users:docker_admin_cg /"
+									execCommand: "ls"
 
 								)
 							]
