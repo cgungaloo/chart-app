@@ -21,7 +21,7 @@ pipeline{
 		stage('SSH Transfer'){
 			steps{
 			script{
-				sh 'ssh -v'
+				sh 'ls -ltr'
 
 				sshPublisher(
 					continueOnError: false, failOnError: true,
@@ -34,7 +34,7 @@ pipeline{
 									sourceFiles: "**/*",
 									removePrefix: "/",
 									remoteDirectory: "/home/ec2-user/",
-									execCommand: "ls -ltr"
+									execCommand: "pwd"
 
 								)
 							]
