@@ -22,7 +22,7 @@ pipeline{
 		stage('SSH Transfer'){
 			steps{
 			script{
-				sh 'chmod -R 777 ./'
+				sh "chmod -R 777 ./"
 
 				sshPublisher(
 					continueOnError: false, failOnError: true,
