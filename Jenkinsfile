@@ -31,7 +31,7 @@ pipeline{
 								sshTransfer(
 									cleanRemote: false,
 									excludes: '', 
-									execCommand: '/home/ec2-user/test_ssh', 
+									execCommand: 'sudo mkdir /home/ec2-user/test_ssh', 
 									execTimeout: 120000, 
 									flatten: false, 
 									makeEmptyDirs: false, 
