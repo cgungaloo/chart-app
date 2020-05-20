@@ -30,8 +30,8 @@ function ChartRender(){
 
 	const axes = React.useMemo(
     () => [
-      { primary: true, type: 'time', position: 'bottom' },
-      { type: 'linear', position: 'left'}
+      { primary: true, type: 'linear', position: 'bottom' },
+      { type: 'linear', position: 'left', stacked:false }
     ],
     []
   )
