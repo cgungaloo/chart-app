@@ -5,26 +5,24 @@ class DataVars extends Component{
 	constructor() {
 		super();
 		this.state = {
-			interest_rate:0.5,
+			interest_rate:'0.5',
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 	handleSubmit(event){
 		event.preventDefault();
-		console.log("EL " + this.element.value)
+		console.log(this.element.value)
 		this.setState({
 			 interest_rate: this.element.value
 		 },
 	 	function() { console.log("setState completed", this.state) });
-		console.log("state "+ this.state);;
-		this.forceUpdate()
+
 	}
 
 	render(){
 
 		const {interest_rate} = this.state
-		console.log("ref rate : " +interest_rate)
 		return(
 		<div>
 

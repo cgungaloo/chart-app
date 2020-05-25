@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ChartRender from './ChartRender'
 import CompoundInterestForm from './CompoundForm/CompoundInterestForm'
 import DataVars from './Data/DataVars'
+import Cahrter from './Data/Charter'
 
 class App extends Component {
 
@@ -10,6 +11,7 @@ class App extends Component {
         <div className="container">
           <h1>Compound interest</h1>
           <DataVars />
+
         </div>
       )
   }

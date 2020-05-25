@@ -29,9 +29,8 @@ export default class LineDemo extends Component {
       var initial_value =10
       data.datasets[0].data = this.compoundList(initial_value)
       console.log(data.datasets[0].data[0])
-      let lineChart = this.reference.chartInstance
-      lineChart.update();
   }
+
 
   compoundList(initial_value){
     var current_value =initial_value
@@ -52,7 +51,7 @@ export default class LineDemo extends Component {
 render(){
   return (
       <div>
-        <Line data={data} ref={(reference) => this.reference = reference} width={5} height={1}/>
+        <Line data={data} ref={(reference) => this.reference = reference} width={5} height={1} redraw/>
         <h1>Interest Rate: {this.props.interest_rate}</h1>
       </div>
     );
