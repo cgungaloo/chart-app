@@ -6,7 +6,8 @@ class DataVars extends Component{
 		super();
 		this.state = {
 			interest_rate:0.05,
-			initial_amount:1000
+			initial_amount:1000,
+			annual_payments:100
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
@@ -17,7 +18,8 @@ class DataVars extends Component{
 		console.log(inputs.interest_rate.value)
 		this.setState({
 			 interest_rate: inputs.interest_rate.value,
-			 initial_amount: inputs.initial_amount.value
+			 initial_amount: inputs.initial_amount.value,
+			 annual_payments: inputs.monthly_payments.value
 		 },
 	 	function() { console.log("setState completed", this.state) });
 
@@ -36,6 +38,8 @@ class DataVars extends Component{
 				<input type="text" name="interest_rate" id="interest_rate"/><br/>
 				<label for="initial_amount">Initial Value</label>
 				<input type="text" name="initial_amount" id="initial_amount"/><br/>
+				<label for="annual_payments">Annual Payments</label>
+				<input type="text" name="annual_payments" id="annual_payments"/><br/>
 				<input type="submit" value="Submit" />
 			</form>
 		</div>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Line } from 'react-chartjs-2';
-import Chart from 'chart.js';
 
 export default class LineDemo extends Component {
 
@@ -28,7 +27,6 @@ export default class LineDemo extends Component {
   }
 
   componentDidUpdate(prevProps){
-    console.log("data has changed")
     if (prevProps.interest_rate !== this.props.interest_rate || prevProps.initial_amount !== this.props.initial_amount) {
       var initial_value =this.props.initial_amount
       let data = this.state.data;
@@ -40,8 +38,8 @@ export default class LineDemo extends Component {
 
 
   compoundList(initial_value){
-    console.log("initial value: "+initial_value)
-    var current_value =parseFloat(initial_value)
+    const annual_payments = parseFloat(this.props.annual_payments)
+    var current_value = parseFloat(initial_value) + annual_payments
     const interest_rate = parseFloat(this.props.interest_rate)
     var compoundList =[];
 
@@ -54,8 +52,7 @@ export default class LineDemo extends Component {
   }
 
   calculateCompound(current_value, interest_rate){
-    console.log("cv : "+current_value)
-    console.log("ir : "+interest_rate)
+
     return current_value + ((current_value/100) * interest_rate)
   }
 

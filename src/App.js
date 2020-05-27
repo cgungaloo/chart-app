@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-import ChartRender from './ChartRender'
-import CompoundInterestForm from './CompoundForm/CompoundInterestForm'
 import DataVars from './Data/DataVars'
-import Cahrter from './Data/Charter'
 
 class App extends Component {
 
